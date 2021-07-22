@@ -1,2 +1,2 @@
-# [resume](https://github.com/sachiniyer/resume)
+# resume
 This is my resume
