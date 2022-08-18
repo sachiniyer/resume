@@ -1,0 +1,10 @@
+* Screenshot of my Linux Environment
+* Why new and old?
+Because there are so many changes that have happened in the last year
+** Changes
+1. Ton more pacman packages
+2. I now have a de - KDE
+3. I did bga resoldering to upgrade my cpu
+4. I use firefox now
+5. I use doom now
+6. A ton more other things
