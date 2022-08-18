@@ -8,3 +8,7 @@ Because there are so many changes that have happened in the last year
 4. I use firefox now
 5. I use doom now
 6. A ton more other things
+* New
+[[./new.png][New Environment]]
+* Old
+[[./old.png][Old Environment]]
