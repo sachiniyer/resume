@@ -4,10 +4,11 @@ Because there are so many changes that have happened in the last year
 ** Changes
 1. Ton more pacman packages
 2. I now have a de - KDE
-3. I did bga resoldering to upgrade my cpu
-4. I use firefox now
-5. I use doom now
-6. A ton more other things
+3. I installed a new monitor
+4. I did bga resoldering to upgrade my cpu
+5. I use firefox now
+6. I use doom now
+7. A ton more other things
 * New
 [[./new.png]]
 * Old
