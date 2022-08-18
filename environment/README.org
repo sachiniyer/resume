@@ -9,6 +9,6 @@ Because there are so many changes that have happened in the last year
 5. I use doom now
 6. A ton more other things
 * New
-[[./new.png][New Environment]]
+[[./new.png]]
 * Old
-[[./old.png][Old Environment]]
+[[./old.png]]
