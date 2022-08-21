@@ -67,7 +67,9 @@
 	\end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+ \newcommand{\resumeSubItem}[2]{
+   \resumeItem{#1}{#2}\vspace{-4pt}
+ }
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -97,16 +99,24 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {\href{https://engineering.nyu.edu}{New York University}}{Brooklyn, NY}
-{Bachelors of Science in Computer Science -- Final Year}{Aug. 2021 -- Present}
+{Bachelors of Science in Computer Science -- Final Year}{May. 2023}
 \resumeSubheading
 {\href{https://siliconvalley.basisindependent.com/}{Basis Independent Silicon Valley}}{San Jose, CA}
-{High School Diploma}{Aug. 2016 -- Jul. 2020}
+{High School Diploma}{Jul. 2020}
 \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
 \resumeSubHeadingListStart
+
+\resumeSubheading
+{\href{https://www.amazon.jobs/en/teams/last-mile}{Amazon}}{Seattle, WA}
+{Software Development Engineering Intern}{May 2022 -- August 2022}
+\resumeItemListStart
+\resumeItem{Data Aggregation Service}
+{Created a fullstack service to visualize last mile delivery data. Created a typescript React frontend and an API with AWS CDK, Java Lambda Functions, API Gateway, S3 Compute, and internal Amazon Services. Deployed service with AWS CodeDeploy and validated service with unit and integration testing.}
+\resumeItemListEnd
 
 \resumeSubheading
 {\href{https://corelink.hpc.nyu.edu}{NYU Holodeck (Corelink)}}{Brooklyn, NY}
@@ -123,15 +133,6 @@
 \resumeItem{\href{https://dev.hpc.nyu.edu/corelink/corelink-examples}{Audio Video Conferencing}}
 {Created an audio/video service in C++ that interfaces with the Corelink network.}
 \resumeItemListEnd
-
-\resumeSubheading
-{\href{https://www.amazon.jobs/en/teams/last-mile}{Amazon}}{Seattle, WA}
-{Software Development Engineering Intern}{May 2022 -- August 2022}
-\resumeItemListStart
-\resumeItem{Data Aggregation Service}
-{Created a project to visualize data within team's service. Created a typescript React frontend and an API with AWS CDK, Java Lambda Functions, API Gateway, and internal Amazon Services}
-\resumeItemListEnd
-
 
 \resumeSubheading
 {\href{https://zkga.me}{Dark Forest}}{San Jose, CA}
