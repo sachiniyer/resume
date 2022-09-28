@@ -4,8 +4,10 @@
 % Website: https://sachiniyer.com
 % License : MIT
 %------------------------
+% Based off template by Sourabh Bajaj
 
-% Taken from template by Sourabh Bajaj
+% chktex-file 1
+% chktex-file 8
 
 \documentclass[letterpaper,11pt]{article}
 
@@ -35,14 +37,14 @@
 
 \urlstyle{same}
 
-\raggedbottom
-\raggedright
+\raggedbottom{}
+\raggedright{}
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
 \titleformat{\section}{
 	\vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule{} \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
@@ -56,7 +58,7 @@
 	\vspace{-1pt}\item[]
 	\begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
 		#1 & \textit{\small #2} \\
-	\end{tabular*}\vspace{-5pt}
+	\end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -64,7 +66,7 @@
 	\begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
 		\textbf{#1} & #2 \\
 		\textit{\small#3} & \textit{\small #4} \\
-	\end{tabular*}\vspace{-5pt}
+	\end{tabular*}\vspace{-7pt}
 }
 
  \newcommand{\resumeSubItem}[2]{
@@ -96,19 +98,19 @@
 
 %-----------EDUCATION-----------------
 \section{Education}
-\resumeSubHeadingListStart
+\resumeSubHeadingListStart{}
 \resumeSubheading
 {\href{https://engineering.nyu.edu}{New York University}}{Brooklyn, NY}
 {Bachelors of Science in Computer Science}{Exp. May. 2023}
 \resumeSubheading
 {\href{https://siliconvalley.basisindependent.com/}{Basis Independent Silicon Valley}}{San Jose, CA}
 {High School Diploma}{Jul. 2020}
-\resumeSubHeadingListEnd
+\resumeSubHeadingListEnd{}
 
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
-\resumeSubHeadingListStart
+\resumeSubHeadingListStart{}
 
 \resumeSubheading
 {\href{https://www.amazon.jobs/en/teams/last-mile}{Amazon}}{Seattle, WA}
@@ -117,7 +119,7 @@
 \resumeItem{Data Aggregation Service}
 {Created a full stack service to visualize last mile delivery data. Created a Typescript React frontend that calls an AWS API Gateway based backend implemented with Java Lambda Functions, API Gateway, S3, and Internal Amazon Services. Service sifts/caches through up to a TB of data per query with S3 Select.}
 \resumeItem{Deployment/Observability Pipeline}
-{The service is built with the AWS Typescript CDK. It is validated with unit and integration testing before being deployed through CodeDeploy and monitored with CloudWatch alarms and SNS.}
+{The service is built with the AWS Typescript CDK.\@ It is validated with unit and integration testing before being deployed through CodeDeploy and monitored with CloudWatch alarms and SNS.}
 \resumeItemListEnd
 
 \resumeSubheading
@@ -145,6 +147,15 @@
 \resumeItemListEnd
 
 \resumeSubheading
+{\href{https://sparkupbiz.us}{Sparkup}}{Brooklyn, NY}
+{Software Development Intern}{September 2022 -- present}
+\resumeItemListStart
+\resumeItem{\href{https://play.google.com/store/apps/details?id=com.sparkup}{UX Development}}
+{Implemented a new feature in React Native App to link names and phone numbers in transactions}
+\resumeItemListEnd
+
+
+\resumeSubheading
 {\href{https://www.arubanetworks.com/company/about-us/}{Hewlett Packard Enterprise (Aruba Networks)}}{Santa Clara, CA}
 {Cloud Intern}{June 2019 -- August 2019}
 \resumeItemListStart
@@ -160,29 +171,29 @@
 \resumeItem{\href{https://github.com/sachiniyer/SynesthesiaVisualizer}{Synesthesia Visualizer}}
 {Create a visualizer that mimics the experience of Auditory Visual Synthesis with librosa and yin. Utilizes AWS infrastructure (autoscaling ec2 cluster) for compute and WebGL for VR.}
 \resumeItem{\href{https://github.com/sachiniyer/delivery-service}{Delivery Service}}
-{Created a web crawling service to notify when there is a delivery slot available for Whole Foods, Costco, or Safeway. Used AWS SNS, ECS,  and Lambda functions. Created Docker containers with headless Chrome instances running Selenium.}
+{Created a web crawling service to notify available delivery slots for Whole Foods, Costco, or Safeway. Used AWS SNS, ECS, and Lambda functions. Created headless Chrome docker containers running Selenium.}
 \resumeItem{\href{https://sachiniyer.com}{Personal Website}}
 {Created a website that does real time 3D rendering in pure client side javascript with reactive interactive elements. Deployed with AWS CodeDeploy, API Gateway, CloudFront, IoT, S3, DynamoDB, and SNS.}
 \resumeItem{\href{https://github.com/sachiniyer/ip-monitor}{IP Monitor}}
 {Used the QT Framework and built a KDE widget to monitor public and private IP Addresses.}
 \resumeItem{\href{https://github.com/sachiniyer/Electric-Trombone}{Electronic Trombone}}
-{Engineer a midi controller in the form of a trombone using Arduino to apply standard instrument knowledge to electronic applications with capactive sensing and pid controllers.}
+{Engineer a trombone midi controller using Arduino with capacitive sensing and pid controllers.}
 \resumeSubHeadingListEnd
 
 %
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
-\resumeSubHeadingListStart
+\resumeSubHeadingListStart{}
 \resumeItem{Languages}
-{Python, Typescript, Javascript/Node, C++, C, Rust, Java, (e)Lisp, Solidity, Shell Scripting, \LaTeX}
+{Python, Typescript, Javascript/Node, C++, C, Rust, Java, (e)lisp, Solidity, Shell Scripting, \LaTeX} % chktex 36
 \resumeItem{Technologies}
 {AWS, \href{https://github.com/sachiniyer/resume/tree/master/environment}{Linux}, Emacs, Docker/Kubernetes, ReactJS, Jupyter Notebooks, NGINX, \ldots}
-\resumeSubHeadingListEnd
+\resumeSubHeadingListEnd{}
 
 
 %--------Certifications------------
 \section{Certifications}
-\resumeSubHeadingListStart
+\resumeSubHeadingListStart{}
 \certItem{\href{https://www.credly.com/badges/ef46fdf4-2c55-474d-a963-9ee14107160f}{AWS Solutions Architect}}
 {September 2021}
 \certItem{\href{https://www.credly.com/badges/c8d7f47f-c6c1-4af9-8391-5b509b92b271}{AWS Cloud Practitioner}}
@@ -191,7 +202,7 @@
 {July 2020}
 \certItem{\href{https://coursera.org/share/daef661212dab251985d69e4fb71f730}{AWS Fundamentals Specialization}}
 {June 2020}
-\resumeSubHeadingListEnd
+\resumeSubHeadingListEnd{}
 
 %-------------------------------------------
 \end{document}
