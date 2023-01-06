@@ -5,3 +5,5 @@ resume.aux
 resume.dvi
 resume-gpa*
 .gpa
+indent.log
+.auctex-auto
