@@ -13,6 +13,8 @@ build:
 	- sed -i -e "$str2" resume-gpa.tex
 	- pdflatex resume.tex
 	- pdflatex resume-gpa.tex
+build-no-gpa:
+	- pdflatex resume.tex
 
 
 # end
