@@ -15,6 +15,12 @@ build:
 	- pdflatex resume-gpa.tex
 build-no-gpa:
 	- pdflatex resume.tex
+clean:
+	- -rm resume.aux resume.log resume.out resume.pdf
+	- -rm resume-gpa.aux resume-gpa.log resume-gpa.out resume-gpa.pdf
+clean-no-gpa:
+	- -rm resume.aux resume.dvi resume.log resume.out resume.pdf
+
 
 
 # end
