@@ -3,23 +3,26 @@
 #
 # @file
 # @version 0.1
+-include .gpa
 build:
-	- gpa1=$(awk 'NR==1 {print; exit}' .gpa)
-	- gpa2=$(awk 'NR==2 {print; exit}' .gpa)
-	- cp resume.tex resume-gpa.tex
-	- str1="s/Bachelors of Science in Computer Science/Bachelors of Science in Computer Science, GPA: ""$gpa1""/g"
-	- str2="s/High School Diploma/High School Diploma, GPA: ""$gpa2""/g"
-	- sed -i -e "$str1" resume-gpa.tex
-	- sed -i -e "$str2" resume-gpa.tex
-	- pdflatex resume.tex
-	- pdflatex resume-gpa.tex
-build-no-gpa:
-	- pdflatex resume.tex
+	@if [ -n "${NAME1}" ] && [ -n "${GPA1}" ] && [ -n "${NAME2}" ] && [ -n "${GPA2}" ] ; then \
+		cp resume.tex resume-gpa.tex; \
+		sed -i -e "s/${NAME1}/${NAME1}, GPA: ${GPA1}/g" resume-gpa.tex; \
+		sed -i -e "s/${NAME2}/${NAME2}, GPA: ${GPA2}/g" resume-gpa.tex; \
+		echo "Making RESUME-GPA"; \
+		pdflatex resume-gpa.tex > /dev/null; \
+	else \
+		if [ -n "${NAME1}" ] || [ -n "${GPA1}" ] || [ -n "${NAME2}" ] || [ -n "${GPA2}" ] ; then \
+			echo "Must give NAME1, GPA1, NAME2, GPA2" ; exit 1;\
+		fi \
+	fi
+
+	@echo "Making RESUME"
+	@pdflatex resume.tex > /dev/null
 clean:
-	- -rm resume.aux resume.log resume.out resume.pdf
-	- -rm resume-gpa.aux resume-gpa.log resume-gpa.out resume-gpa.pdf
-clean-no-gpa:
-	- -rm resume.aux resume.dvi resume.log resume.out resume.pdf
+	@echo "Cleaning files"
+	@rm resume.aux resume.log resume.out resume.pdf > /dev/null
+	@rm resume-gpa.aux resume-gpa.log resume-gpa.out resume-gpa.pdf resume-gpa.tex > /dev/null
 
 
 
