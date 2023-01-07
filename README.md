@@ -10,4 +10,4 @@ This is my resume
     GPA2=9.9
     ```
  - CI/CD enable to autodeploy to [https://sachiniyer.com/resume](https://sachiniyer.com/resume)
- - To build run `make`. To clean run `make clean`.
+ - To build run `make`. To clean run `make clean`. To leave pdf(s), `make clean-no-pdf`

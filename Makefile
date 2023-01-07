@@ -23,6 +23,11 @@ clean:
 	@echo "Cleaning files"
 	@rm resume.aux resume.log resume.out resume.pdf > /dev/null
 	@rm resume-gpa.aux resume-gpa.log resume-gpa.out resume-gpa.pdf resume-gpa.tex > /dev/null
+clean-no-pdf:
+	@echo "Cleaning files (except pdfs)"
+	@rm resume.aux resume.log resume.out > /dev/null
+	@rm resume-gpa.aux resume-gpa.log resume-gpa.out resume-gpa.tex > /dev/null
+
 
 
 
