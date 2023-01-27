@@ -11,3 +11,4 @@ This is my resume
     ```
  - CI/CD enable to autodeploy to [https://sachiniyer.com/resume](https://sachiniyer.com/resume)
  - To build run `make`. To clean run `make clean`. To leave pdf(s), `make clean-no-pdf`
+ - I have a ton of links on my resume, and the github pdf viewer does not show them - head to my website [https://sachiniyer.com/resume](https://sachiniyer.com/resume)
