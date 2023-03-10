@@ -12,8 +12,15 @@ build:
 		echo "Making RESUME-GPA"; \
 		pdflatex resume-gpa.tex > /dev/null; \
 	else \
-		if [ -n "${NAME1}" ] || [ -n "${GPA1}" ] || [ -n "${NAME2}" ] || [ -n "${GPA2}" ] ; then \
-			echo "Must give NAME1, GPA1, NAME2, GPA2" ; exit 1;\
+		if [ -n "${NAME1}" ] && [ -n "${GPA1}" ] ; then \
+			cp resume.tex resume-gpa.tex; \
+			sed -i -e "s/${NAME1}/${NAME1}, GPA: ${GPA1}/g" resume-gpa.tex; \
+			echo "Making RESUME-GPA"; \
+			pdflatex resume-gpa.tex > /dev/null; \
+		else \
+			if [ -n "${NAME1}" ] || [ -n "${GPA1}" ] || [ -n "${NAME2}" ] || [ -n "${GPA2}" ] ; then \
+				echo "Must give NAME1, GPA1, NAME2, GPA2" ; exit 1;\
+			fi \
 		fi \
 	fi
 
