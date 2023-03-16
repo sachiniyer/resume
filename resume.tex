@@ -21,6 +21,7 @@
 \usepackage{enumitem}
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{tabularx}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -58,13 +59,18 @@
 		#1 & \textit{\small #2} \\
 	\end{tabular*}\vspace{-7pt}
 }
+\newcolumntype{Y}{>{\centering}X}
 
 \newcommand{\resumeSubheading}[4]{
-	\vspace{-1pt}\item[]
-	\begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
-		\textbf{#1} & #2 \\
-		\textit{\small#3} & \textit{\small #4} \\
-	\end{tabular*}\vspace{-7pt}
+	\item[]
+	\vspace{-4pt}
+	\centering \textbf{#1}\\
+	\textit{\small#3}\\
+	\vspace{-13pt}
+	\begin{tabularx}{\linewidth}{ l @{\extracolsep{\fill}} r }
+		\textit{\small #4}  & \textit{\small#2} \\
+	\end{tabularx}
+	\vspace{-20pt}
 }
 
  \newcommand{\resumeSubItem}[2]{
