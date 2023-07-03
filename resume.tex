@@ -1,16 +1,17 @@
 \documentclass[letterpaper,11pt]{article}
 \usepackage{resume}
 
-\begin{document}
+\input{.gpa}
 
+\begin{document}
 
 {\input{./heading/head}}
 
 \section{Education}
 \resumeSubHeadingListStart{}
-\resumeSubheading
-{\href{https://engineering.nyu.edu}{New York University}}{Brooklyn, NY}
-{Sep 2020 - May 2023}{Bachelors of Science in Computer Science}
+{
+  \input{./education/NYU}
+}
 \resumeSubHeadingListEnd{}
 
 \section{Experience}

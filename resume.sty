@@ -18,6 +18,7 @@
 \usepackage{enumitem}
 \usepackage[colorlinks=true,linkcolor=black,anchorcolor=black,citecolor=black,filecolor=black,menucolor=black,runcolor=black,urlcolor=black]{hyperref}
 \usepackage{fancyhdr}
+\usepackage{keyval}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -75,4 +76,19 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=3.75mm]}
 		\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+
 \setlength{\footskip}{5pt}
+
+\makeatletter
+\newcommand{\getKeyValue}[2]{%
+  \expandafter\ifx\csname kv@#1\endcsname\relax
+    \textbf{Error:} Key '#1' not found
+  \else
+    \csname kv@#1\endcsname
+  \fi
+}
+\makeatother
+
+\makeatletter
+\newcommand{\defineKeyValue}[2]{\expandafter\newcommand\csname kv@#1\endcsname{#2}}
+\makeatother
