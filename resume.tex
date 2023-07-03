@@ -79,21 +79,12 @@
 		\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-
-	\textbf{\href{https://sachiniyer.com/}{\Large Sachin Iyer}}
-	&\href{https://sachiniyer.com/}{https://sachiniyer.com} \\
-	\href{https://sachiniyer.com/email}{sachinjiyer@gmail.com }
-	& \href{https://github.com/sachiniyer}{https://github.com/sachiniyer}\\
-\end{tabular*}
-\vspace{-16pt}
-
+{\input{./heading/head}}
 %-----------EDUCATION-----------------
 \section{Education}
 \resumeSubHeadingListStart{}
@@ -107,59 +98,14 @@
 \section{Experience}
 \resumeSubHeadingListStart{}
 
-\resumeSubheading
-{\href{https://www.amazon.jobs/en/teams/last-mile}{Amazon}}{Seattle, WA}
-{Software Development Engineer}{Incoming}
-
-\resumeSubheading
-{\href{https://www.amazon.jobs/en/teams/last-mile}{Amazon}}{Seattle, WA}
-{Software Development Engineering Intern}{May 2022 -- August 2022}
-\resumeItemListStart
-\resumeItem{Data Aggregation Service}
-{Created a full stack service to visualize last mile delivery data. Created a Typescript React frontend with \href{https://github.com/Shopify/polaris}{Polaris styling} that calls an AWS backend implemented with \href{https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html}{Java Lambda Functions}, \href{https://aws.amazon.com/api-gateway/}{API Gateway}, \href{https://aws.amazon.com/s3/}{S3}, and Internal Amazon Services. Used \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/selecting-content-from-objects.html}{S3 Select} and \href{https://spark.apache.org/}{Spark} to filter through about 1TB per query.}
-\resumeItem{Deployment/Observability Pipeline}
-{The service is built with the AWS \href{https://docs.aws.amazon.com/cdk/v2/guide/work-with-cdk-typescript.html}{Typescript CDK}. It is validated with unit and integration testing before being deployed through \href{https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html}{CodeDeploy} and monitored with \href{https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html}{CloudWatch} alarms and \href{https://aws.amazon.com/sns/}{SNS}.}
-\resumeItemListEnd
-
-\resumeSubheading
-{\href{https://www.nyu.edu/life/information-technology/research-computing-services/research-data-and-tools/high-speed-research-network-hsrn.html}{NYU High Speed Research Network (HSRN)}}{Brooklyn, NY}
-{Academic Researcher}{February 2021 -- May 2023}
-\resumeItemListStart
-\resumeItem{\href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2232817&HistoricalAwards=false}{Parallel File System}}
-{Deployed an \href{https://www.nsf.gov/awardsearch/showAward?AWD_ID=2232817&HistoricalAwards=false}{NSF} funded 6PB storage PFS (\href{https://github.com/seaweedfs/seaweedfs}{SeaweedFS}) for usage internally and externally to the HSRN. Automated Deployment with Ansible Playbooks and Rust CLI. Benchmarked with \href{https://sourceforge.net/projects/bonnie/}{Bonie++} and \href{https://github.com/hpc/ior}{IOR}.}
-\resumeItem{\href{https://dev.hpc.nyu.edu/corelink/corelink-client/}{Clients}}
-{Implemented API of \href{https://corelink.hsrn.nyu.edu/}{internal broker service} for Bash, and did core development on Python, C++, and JS}
-\resumeItem{\href{https://dev.hpc.nyu.edu/corelink/corelink-examples}{Audio Conferencing}}
-{Created an audio service (\href{http://portaudio.com/}{Portaudio}) in C++ that interfaces with \href{https://corelink.hsrn.nyu.edu/}{internal broker service}.}
-\resumeItem{\href{https://dev.hpc.nyu.edu/corelink/corelink-documentation/-/pipelines}{CI/CD}}
-{Developed documentation, linting, testing, deployment (\href{https://github.com/GoogleContainerTools/kaniko}{DinD with Kaniko}) pipelines for the project in \href{https://dev.hsrn.nyu.edu/}{Gitlab}}
-\resumeItem{\href{https://engineering.nyu.edu/research-innovation/student-research/vertically-integrated-projects/vip-teams/nyu-holodeck-high-speed-research-network}{Mentorship}}
-{Leader of the \href{https:/vip.hsrn.nyu.edu}{student research arm}. Managed and onboarded over 110 students over 4 semesters.}
-\resumeItemListEnd
-
-\resumeSubheading
-{\href{https://www.arubanetworks.com/company/about-us/}{Hewlett Packard Enterprise (Aruba Networks)}}{Santa Clara, CA}
-{Cloud Intern}{June 2019 -- August 2019}
-\resumeItemListStart
-\resumeItem{Estimating Bandwidth}
-{Estimated bandwidth using \href{https://en.wikipedia.org/wiki/Autoregressive_integrated_moving_average}{Auto ARIMA}/\href{https://facebook.github.io/prophet/}{Prophet} and other time series algorithms.}
-\resumeItemListEnd
-
-\resumeSubheading
-{\href{https://sparkupbiz.us}{Sparkup}}{Brooklyn, NY}
-{Software Development Intern}{September 2022 -- December 2022}
-\resumeItemListStart
-\resumeItem{\href{https://play.google.com/store/apps/details?id=com.sparkup}{UX Development}}
-{Implemented a new feature in React Native App to link names and phone numbers in transactions}
-\resumeItemListEnd
-
-\resumeSubheading
-{\href{https://zkga.me}{Dark Forest}}{San Jose, CA}
-{Graphics Intern}{December 2021 -- February 2022}
-\resumeItemListStart
-\resumeItem{\href{https://blog.zkga.me/renderer-plugin-contest}{Shader Development}}
-{Created a typescript plugin that allows for custom \href{https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API}{WebGL} shaders in the \href{https://zkga.me/}{Dark Forest game}.}
-\resumeItemListEnd
+{
+  \input{./experience/amazon-sde}
+  \input{./experience/amazon-intern}
+  \input{./experience/hsrn}
+  \input{./experience/aruba}
+  \input{./experience/sparkup}
+  \input{./experience/darkforest}
+}
 
 \resumeSubHeadingListEnd
 
@@ -168,26 +114,15 @@
 \section{Projects}
 \resumeSubHeadingListStart
 
-\resumeItem{\href{https://github.com/sachiniyer/SynesthesiaVisualizer}{Synesthesia Visualizer}}
-{Create a visualizer that mimics the experience of Auditory Visual Synthesis with \href{https://librosa.org/}{librosa} and \href{http://audition.ens.fr/adc/pdf/2002_JASA_YIN.pdf}{yin}. Utilizes AWS infrastructure (\href{https://aws.amazon.com/ecs/}{autoscaling ec2 cluster}) for compute and \href{https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_on_the_web/WebVR}{WebVR} for visuals.}
-
-\resumeItem{\href{https://github.com/sachiniyer/delivery-service}{Delivery Service}}
-{Created a web crawling service to notify available grocery delivery slots for Whole Foods, Costco, or Safeway. Used AWS \href{https://aws.amazon.com/sns/}{SNS}, \href{https://aws.amazon.com/ecs/}{ECS}, and \href{https://docs.aws.amazon.com/lambda/index.html}{Lambda functions}. Created \href{https://hub.docker.com/r/browserless/chrome/}{headless Chrome docker containers} running \href{https://www.selenium.dev/}{Selenium}.}
-
-\resumeItem{\href{https://github.com/sachiniyer/git-openresty}{Git OpenResty}}
-{Created a container that utilized \href{https://luajit.org/}{Lua JIT} with \href{https://openresty.org/en/}{OpenResty} to sync git repos as a \href{https://github.com/kubernetes/git-sync}{git-sync} alternative}
-
-\resumeItem{\href{https://github.com/sachiniyer/cheap_portable_k3s}{K3S Cluster}}
-{Created a portable resilient fault-tolerant \href{https://k3s.io/}{k3s cluster} that networks through a wireguard mesh (\href{https://github.com/juanfont/headscale}{headscale})}
-
-\resumeItem{\href{https://sachiniyer.com}{Personal Website}}
-{Self-deployed a \href{https://www.babylonjs.com/}{BabylonJS} website with \href{https://github.com/sachiniyer/cheap_portable_k3s\#applications}{kubernetes} \href{https://github.com/sachiniyer/cheap_portable_k3s/blob/main/README.pdf}{k3s} and \href{https://blog.sachiniyer.com/posts/post1/}{full CI/CD} using \href{https://github.com/kubernetes/git-sync}{Git OpenResty}.}
-
-\resumeItem{\href{https://github.com/sachiniyer/ip-monitor}{IP Monitor}}
-{Used the \href{https://www.qt.io/product/framework}{QT Framework} and built a \href{https://kde.org/}{KDE} widget to monitor your public and private IP Addresses.}
-
-\resumeItem{\href{https://github.com/sachiniyer/Electric-Trombone}{Electronic Trombone}}
-{Made a trombone midi controller using Arduino with capacitive sensing and pid controllers.}
+{
+  \input{./projects/synvis}
+  \input{./projects/delivery}
+  \input{./projects/openresty}
+  \input{./projects/cluster}
+  \input{./projects/website}
+  \input{./projects/ipmonitor}
+  \input{./projects/ebone}
+}
 
 \resumeSubHeadingListEnd
 
@@ -195,24 +130,23 @@
 %--------PROGRAMMING SKILLS------------
 \section{Programming Skills}
 \resumeSubHeadingListStart{}
-\resumeItem{Langs}
-{\href{https://dev.hsrn.nyu.edu/corelink/corelink-examples/-/tree/dev/example-browser}{Typescript}, \href{https://dev.hsrn.nyu.edu/corelink/corelink-examples/-/tree/dev/client-examples/javascript/simple_udp}{Javascript}, \href{https://github.com/sachiniyer/control_display/tree/main/control_display_site}{Node}, \href{https://github.com/sachiniyer/circular_buffer}{C++}, C, \href{https://github.com/sachiniyer/rustlings-solutions}{Rust}, Java, \href{https://dev.hsrn.nyu.edu/corelink/corelink-examples/-/tree/dev/client-examples/python/simple_tcp}{Python}, \href{https://github.com/sachiniyer/emacs/blob/old-config/.emacs}{(e)Lisp}, \href{https://dev.hsrn.nyu.edu/corelink/corelink-client/-/tree/dev/bash}{Bash/Zsh}, \href{https://dev.hsrn.nyu.edu/corelink/corelink-documentation/-/tree/master/docs}{MDown}, JSON, \href{https://github.com/sachiniyer/control_display/blob/main/control_display_site/deployment.yaml}{YAML}, \href{https://github.com/sachiniyer/resume/blob/master/resume.tex}{\LaTeX}} % chktex 36
-\resumeItem{Tech}
-{\href{https://www.credly.com/badges/ef46fdf4-2c55-474d-a963-9ee14107160f}{AWS}, \href{https://github.com/sachiniyer/resume/tree/master/environment}{Linux}, \href{https://github.com/sachiniyer/emacs}{Emacs}, \href{https://github.com/sachiniyer/ip-monitor}{QT}, \href{https://github.com/sachiniyer/git-openresty/blob/main/Dockerfile}{Docker}, \href{https://github.com/sachiniyer/cheap_portable_k3s/blob/main/README.pdf}{k8s/k3s Rancher}, \href{https://github.com/sachiniyer/cheap_portable_k3s/blob/main/nginx.conf}{Nginx}, Traefik, \href{https://resow.sachiniyer.com}{ReactJS}, \href{https://github.com/sachiniyer/cheap_portable_k3s/blob/main/README.pdf}{Tailscale}, \href{https://github.com/agiledev-students-fall2022/final-project-team-resow/tree/master/back-end/models}{MongoDB}, Postgres, \ldots}
+{
+  \input{./programming/langs}
+  \input{./programming/tech}
+}
 \resumeSubHeadingListEnd{}
 
 
 %--------Certifications------------
 \section{Certifications}
 \resumeSubHeadingListStart{}
-\certItem{\href{https://www.credly.com/badges/ef46fdf4-2c55-474d-a963-9ee14107160f}{AWS Solutions Architect}}
-{September 2021}
-\certItem{\href{https://www.credly.com/badges/c8d7f47f-c6c1-4af9-8391-5b509b92b271}{AWS Cloud Practitioner}}
-{August 2021}
-\certItem{\href{https://coursera.org/share/29802cca497e8680b26b241d0ef50b59}{Stanford Machine Learning by Andrew Ng}}
-{July 2020}
-\certItem{\href{https://coursera.org/share/daef661212dab251985d69e4fb71f730}{AWS Fundamentals Specialization}}
-{June 2020}
+{
+  \input{./certifications/solutions}
+  \input{./certifications/practitioner}
+  \input{./certifications/ml}
+  \input{./certifications/fundamentals}
+
+}
 \resumeSubHeadingListEnd{}
 
 %-------------------------------------------
