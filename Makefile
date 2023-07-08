@@ -20,3 +20,4 @@ $(MAIN_PDF): $(MAIN_TEX)
 .PHONY: clean
 clean:
 	rm -rf $(PDF_DIR) *.aux *.log
+	rm -f ${MAIN_PDF}
