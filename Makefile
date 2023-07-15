@@ -6,6 +6,8 @@ TEX_FILES := $(wildcard $(TEX_DIR)/*.tex)
 PDF_FILES := $(patsubst $(TEX_DIR)/%.tex,$(PDF_DIR)/%.pdf,$(TEX_FILES))
 MAIN_PDF := $(basename $(MAIN_TEX)).pdf
 
+.PHONY: all clean
+
 all: $(PDF_FILES) $(MAIN_PDF)
 
 $(PDF_DIR)/%.pdf: $(TEX_DIR)/%.tex
@@ -17,7 +19,6 @@ $(MAIN_PDF): $(MAIN_TEX)
 	pdflatex $(MAIN_TEX)
 	rm -f *.aux *.log *.out
 
-.PHONY: clean
 clean:
 	rm -rf $(PDF_DIR) *.aux *.log
-	rm -f ${MAIN_PDF}
+	rm -f $(MAIN_PDF)
