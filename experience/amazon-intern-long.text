@@ -1,6 +1,6 @@
 \resumeSubheading
 {\href{https://www.amazon.jobs/en/teams/last-mile}{Amazon}}{Seattle, WA}
-{Software Development Engineering Intern}{May 2022 \textemdash August 2022}
+{Software Development Engineering Intern}{05/2022 \textemdash 08/2022}
 \resumeItemListStart
 \resumeItem{Data Aggregation Service}
 {Created a full stack service to visualize last mile delivery data. Created a Typescript React frontend with \href{https://github.com/Shopify/polaris}{Polaris styling} that calls an AWS backend implemented with \href{https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html}{Java Lambda Functions}, \href{https://aws.amazon.com/api-gateway/}{API Gateway}, \href{https://aws.amazon.com/s3/}{S3}, and Internal Amazon Services. Used \href{https://docs.aws.amazon.com/AmazonS3/latest/userguide/selecting-content-from-objects.html}{S3 Select} and \href{https://spark.apache.org/}{Spark} to filter through about 1TB per query.}

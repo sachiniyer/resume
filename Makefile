@@ -12,6 +12,9 @@ PART_FILES := $(foreach dir,$(PART_DIRS),$(wildcard $(dir)/*.tex))
 
 all: $(PDF_FILES) $(MAIN_PDF) resume.sty ${PART_FILES}
 
+# create a target just for the main resume
+main: $(MAIN_PDF)
+
 $(PDF_DIR)/%.pdf: $(TEX_DIR)/%.tex resume.sty ${PART_FILES}
 	mkdir -p $(PDF_DIR)
 	cd $(TEX_DIR) && pdflatex -output-directory=../$(PDF_DIR) $(notdir $<)
