@@ -53,21 +53,15 @@
 
 \newcommand{\certItem}[2]{
     \item[]
-    \begin{tabular*}{0.96\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
         #1 & \textit{\small #2} \\
-    \end{tabular*}\vspace{0pt}
+    \end{tabular*}\vspace{-15pt}
 }
-
-% \newcommand{\resumeSubheading}[4]{
-%     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%       \textbf{#1} \textit{\small#4} | \textit{\small #2} & #3
-%     \end{tabular*}
-% }
 
 \newcommand{\resumeSubheading}[4]{
   \item[]
     \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
-        \textbf{#1} \textit{\small#4} \hspace{2pt} \textit{\small #2} \hspace{2pt} & \hspace{2pt} #3
+        \textbf{#1} \hspace{2pt} \textit{\small#4} \hspace{6pt} \textit{\small #2} & #3
     \end{tabular*}
 }
 
