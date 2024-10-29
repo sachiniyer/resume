@@ -2,6 +2,8 @@
 
 Hosted at https://sachiniyer.com/resume
 
+10-28-2024 : Versions are messed up because of reformat, will fix over time.
+
 ## notes
 
 - The [Makefile](./Makefile) will run `pdflatex` on all the resume versions in the [versions](./versions) directory and output it in the [output](./output) directory. It will also run `pdflatex` on the [resume.tex](./resume.tex) at the root of the directory (and put output at the root of the directory as well).
